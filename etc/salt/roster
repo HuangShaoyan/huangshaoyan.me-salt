@@ -1,0 +1,6 @@
+huangshaoyan.me:
+  host: 106.186.123.188
+  port: 22
+  user: huangshaoyan
+  priv: ~/.ssh/id_rsa
+  sudo: True
