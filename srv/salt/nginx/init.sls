@@ -18,6 +18,7 @@ nginx:
       - file: /etc/nginx/conf.d/no-default.conf
       - file: /etc/nginx/conf.d/example_ssl.conf
       - file: /etc/nginx/conf.d/default.conf
+      - file: /etc/nginx/conf.d/dhparam2048.pem
 
 /etc/nginx/nginx.conf:
   file.managed:
@@ -30,6 +31,10 @@ nginx:
 /etc/nginx/conf.d/common.key:
   file.managed:
     - source: salt://nginx/files/common.key
+
+/etc/nginx/conf.d/dhparam2048.pem:
+  file.managed:
+    - source: salt://nginx/files/dhparam2048.pem
 
 /etc/nginx/conf.d/no-default.conf:
   file.managed:
